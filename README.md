@@ -1,93 +1,58 @@
-# Packed SIMD Coprocessor for Deep Learning Float16 (dlfloat16)
+# Packed SIMD Deep Learning Float16 Coprocessor
 
-This project implements a **Packed SIMD Coprocessor** designed for accelerating **deep learning floating-point operations (dlfloat16)**. The architecture supports vectorized (SIMD-style) operations on 16-bit floating-point numbers and is modular, extensible, and optimized for low-latency parallel computation.
+## Project Objective
 
----
+The goal of this project is to implement a **Packed SIMD (Single Instruction Multiple Data) coprocessor** that offloads deep learning-related floating-point instructions from a **RISC-V core**. This coprocessor is optimized to handle lightweight yet high-performance computations commonly required in neural network inference, especially on embedded and edge devices with constrained resources.
 
-## 🚀 Project Objective
+## Why a Coprocessor?
 
-The aim is to build a **custom SIMD coprocessor** capable of executing deep learning operations using a compact 16-bit floating-point format (`dlfloat16`). This coprocessor is designed to plug into a RISC-V-like SoC or custom CPU pipeline as an accelerator for neural network workloads.
-
----
-
-## 🧩 Top-Level Module: `PSIMD`
-
-The `PSIMD` module integrates all key components of the SIMD coprocessor pipeline, including instruction decoding, register file access, memory interaction, and the execution of vector operations. It receives 32-bit RISC-style instructions and handles vectorized data movement and computation.
+By delegating floating-point computation to a dedicated coprocessor, the RISC-V core is relieved of intensive data-parallel operations, allowing it to focus on control flow and other general-purpose tasks. The coprocessor is designed to efficiently execute operations on a packed format of data using a custom 16-bit floating-point representation, referred to as `dlfloat16`.
 
 ---
 
-## 📦 Module Breakdown
+## Key Features
 
-- ### 🔧 `dlfloat16_decoder`
-  Decodes RISC-style 32-bit instructions and extracts control signals (like operation type, source/dest registers, immediate, and memory control).
+- **Parallel Execution**:  
+  Executes operations on multiple floating-point values simultaneously using wide registers. This enhances performance for workloads such as matrix multiplications and convolutions which are central to deep learning inference.
 
-- ### 📗 `p_reg_file`
-  Implements the vector register file to support three input sources (`rs1`, `rs2`, `rs3`) and one writeback register (`rd`). Each register holds 64-bit data for 4x 16-bit floats.
+- **Packed Data Operation**:  
+  Operates on packed data types, where multiple smaller data items (e.g., 16-bit float values) are grouped into a larger register (e.g., 64-bit or 128-bit). For instance, a 64-bit register can hold four `dlfloat16` values, enabling four-way parallelism.
 
-- ### ⚙️ `Execution_unit`
-  Main datapath block that processes vector floating-point operations (e.g., add, mul) on 16-bit `dlfloat16` values. Supports:
-  - SIMD parallel execution
-  - Floating-point exception flags (invalid, inexact, overflow, underflow, divide-by-zero)
-  - Register-level pipelining and parallel lanes
+- **Efficient Memory Management**:  
+  Optimized load-store unit (LSU) for handling packed data transfers between memory and registers, reducing memory access latency and improving throughput.
 
-- ### 📤 `LSU` (Load/Store Unit)
-  Handles memory operations for vector data. Computes address from register values + immediate offsets and manages read/write control.
-
-- ### 🧮 `mux_reg` and `demux_reg`
-  Configurable multiplexers and demultiplexers to route data between execution, memory, and register file modules.
-
-- ### 🧠 `memory`
-  Abstracted memory interface for simulation and testing. Supports direct data reads and writes using computed addresses.
+- **Reduced Power Consumption**:  
+  Since data is processed in parallel within a single instruction and specialized logic, the design achieves better performance-per-watt compared to traditional scalar execution on the main processor.
 
 ---
 
-## 📐 Data Format
+## How Packed SIMD Works
 
-Each 64-bit register holds:
-- 4 x `dlfloat16` values (16-bit custom floats)
+Packed SIMD involves combining multiple data items of the same or different types into a single wide register. The coprocessor performs the same instruction on all items in parallel, using a single execution cycle.
 
-All SIMD operations are performed in a **packed parallel** manner across these 4 lanes.
+For example:
+- A 128-bit SIMD register may contain four 32-bit floating-point numbers.
+- One SIMD add instruction can perform four additions in parallel.
 
----
-
-## 🧠 Project Highlights
-
-- ✅ **Custom SIMD Architecture**
-- ✅ **Deep Learning 16-bit Float Precision**
-- ✅ **Parallel Vector Execution**
-- ✅ **Modular Verilog Design**
-- ✅ **Coprocessor-Ready Interface**
+Unlike traditional vector processors, **Packed SIMD is more flexible**, allowing operations across different data types (e.g., combining int and float operations) within the same instruction format, making it well-suited for diverse AI workloads.
 
 ---
 
-## 🧪 Simulation & Testing
+## Integration
 
-We are using **testbenches** to verify:
-- Instruction decoding accuracy
-- Vector register file correctness
-- Functional unit outputs for various opcodes
-- Memory load/store interactions
-- Exception flags on edge cases (e.g., NaNs, overflows)
+This module is intended to be integrated as a **tightly- or loosely-coupled coprocessor** with a RISC-V processor core. Communication between the core and the coprocessor is managed through instruction decoding and data exchange mechanisms such as register files and memory interfaces.
 
 ---
 
-## 🔮 Future Plans
+## Use Cases
 
-- Integrate with a RISC-V core as a **coprocessor** via custom opcode ISA extensions
-- Add support for matrix operations (e.g., fused multiply-accumulate)
-- Optimize pipelining and timing (targeting 1-cycle throughput)
-- Synthesize on FPGA for real-time validation
-
----
-
-## 👥 Contributors
-
-- Neha and team  
-(Feel free to add more names and GitHub handles here)
+- **Edge AI inference acceleration**
+- **Energy-efficient embedded deep learning**
+- **Parallel data processing on custom float formats**
+- **FPGA-based coprocessor extension for AI applications**
 
 ---
 
-## 📄 License
+## Final Thoughts
 
-This project is licensed under the [MIT License](LICENSE).
-
+The Packed SIMD coprocessor design promotes scalable, modular, and power-aware computation for modern AI tasks. Its flexibility and performance benefits make it an excellent addition to any RISC-V-based SoC targeting machine learning at the edge.
