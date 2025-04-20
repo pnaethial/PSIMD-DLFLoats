@@ -24,15 +24,6 @@ This module is responsible for:
     We typically use <strong>Xavier (Glorot) initialization</strong> for fully‑connected layers:
   </p>
   <ul>
-    <li>
-      <code>weight</code> values are drawn from a uniform distribution  
-      \(\displaystyle U\bigl(-\frac{\sqrt{6}}{\sqrt{n_{\text{in}}+n_{\text{out}}}},\ \frac{\sqrt{6}}{\sqrt{n_{\text{in}}+n_{\text{out}}}}\bigr)\)  
-      where \(n_{\text{in}}\) and \(n_{\text{out}}\) are the fan‑in and fan‑out dimensions.
-    </li>
-    <li>
-      <code>bias</code> values are typically initialized to zero to avoid introducing unintended offsets.
-    </li>
-  </ul>
 
   <h3>2. Type Conversion to DLFloat16 &amp; IEEE FP16</h3>
   <p>
