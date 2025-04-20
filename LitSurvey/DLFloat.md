@@ -41,27 +41,9 @@ This module is responsible for:
     This conversion reduces memory bandwidth and storage requirements, and allows us to measure performance trade‑offs between the two formats.
   </p>
 
-  <h3>3. Forward Pass &amp; Activation</h3>
-  <p>
-    During inference, each input batch is fed through the network in a single forward pass:
-  </p>
-  <ol>
-    <li><strong>Linear layer:</strong> Compute <code>Y = X·Wᵀ + b</code> via matrix–vector multiplication.</li>
-    <li><strong>ReLU activation:</strong> Apply <code>ReLU(z) = max(0, z)</code> element‑wise to introduce non‑linearity.</li>
-    <li>All operations are performed in the selected 16‑bit format (DLFloat16 or FP16).</li>
-  </ol>
-
-  <h3>4. Latency Measurement &amp; Comparison</h3>
+  <h3>3. Latency Measurement &amp; Comparison</h3>
   <p>
     To evaluate performance, we measure the wall‑clock time for <strong>N</strong> repeated inferences and compute the average latency:
-  </p>
-  <pre><code>// Pseudocode
-start = now()
-for i in 1..N:
-    out = model.forward(input)
-end
-latency_ms = (now() - start) / N * 1000
-</code></pre>
   <p>
     By comparing the average latency for DLFloat16 vs IEEE‑FP16, we can quantify the benefits of the custom format:
   </p>
