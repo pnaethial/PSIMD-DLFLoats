@@ -1,77 +1,102 @@
-## 🔗 External Dependency: Floating Point Execution Unit
+# 🧮 Floating‑Point Execution Unit & DLFloat16
 
-This project integrates a Floating Point Execution Unit from an external repository to support IEEE-compliant 16-bit operations and optimize DLFloat computations.
+## 📘 What Are Floating‑Point Numbers?
 
-The core floating-point logic is reused and adapted from:
+Floating-point numbers are used in computers to represent real numbers using scientific notation. They allow representation of a vast range of values using limited bits.
 
-➡️ [Floating-Point Unit Repository](https://github.com/ananya343B/DL_FPU/tree/main)
+They are generally structured as:
 
-This module is responsible for:
-- Executing arithmetic operations (add, mul, div, sqrt, comparator, float to int , int to float, mac, sub) on 16-bit DLFloat operands
-- Handling floating-point exceptions: overflow, underflow, inexact, division-by-zero, invalid
-- Conforming to IEEE-754 standards for packed SIMD deep learning operations
+- **Sign bit (S)** – Determines if the number is positive or negative
+- **Exponent (E)** – Scales the number
+- **Mantissa (M)** – Holds the precision bits
 
-![image](https://github.com/user-attachments/assets/7f2721ad-c58b-41fd-8f1c-8b2598480d1a)
+The value is calculated as:
 
-![image](https://github.com/user-attachments/assets/a2539509-6ddc-46c9-a9df-a1a9be5df4c4)
+(-1)^S × 2^(E - bias) × (1 + M)
 
-<section id="model-workflow">
-  <h2>Model Workflow & Performance Comparison</h2>
 
-  <h3>1. Model Parameter Initialization</h3>
-  <p>
-    Proper initialization of weights and biases is critical to ensure stable training and inference.  
-    We typically use <strong>Xavier (Glorot) initialization</strong> for fully‑connected layers:
-  </p>
-  <ul>
+---
 
-  <h3>2. Type Conversion to DLFloat16 &amp; IEEE FP16</h3>
-  <p>
-    Once initialized, all <code>float32</code> tensors—both model parameters and inputs—are converted into 16-bit formats:
-  </p>
-  <ul>
-    <li>
-      <strong>IEEE‑754 FP16:</strong> Standard half‑precision format with 1 sign bit, 5 exponent bits (bias 15), and 10 mantissa bits.
-    </li>
-    <li>
-      <strong>DLFloat16:</strong> Custom 16‑bit format with 1 sign bit, 6 exponent bits (bias 31), and 9 mantissa bits, optimized to avoid denormals and simplify hardware.
-    </li>
-  </ul>
-  <p>
-    This conversion reduces memory bandwidth and storage requirements, and allows us to measure performance trade‑offs between the two formats.
-  </p>
+## 💡 IEEE‑754 Half‑Precision (FP16) Format
 
-  <h3>3. Forward Pass &amp; Activation</h3>
-  <p>
-    During inference, each input batch is fed through the network in a single forward pass:
-  </p>
-  <ol>
-    <li><strong>Linear layer:</strong> Compute <code>Y = X·Wᵀ + b</code> via matrix–vector multiplication.</li>
-    <li><strong>ReLU activation:</strong> Apply <code>ReLU(z) = max(0, z)</code> element‑wise to introduce non‑linearity.</li>
-    <li>All operations are performed in the selected 16‑bit format (DLFloat16 or FP16).</li>
-  </ol>
+IEEE FP16 is a standard 16-bit floating-point format:
 
-  <h3>4. Latency Measurement &amp; Comparison</h3>
-  <p>
-    To evaluate performance, we measure the wall‑clock time for <strong>N</strong> repeated inferences and compute the average latency:
-  </p>
-  <pre><code>// Pseudocode
-start = now()
-for i in 1..N:
-    out = model.forward(input)
-end
-latency_ms = (now() - start) / N * 1000
-</code></pre>
-  <p>
-    By comparing the average latency for DLFloat16 vs IEEE‑FP16, we can quantify the benefits of the custom format:
-  </p>
-  <ul>
-    <li><strong>Throughput:</strong> Inferences per second</li>
-    <li><strong>Latency:</strong> Milliseconds per inference</li>
-    <li><strong>Accuracy:</strong> Numerical fidelity of outputs</li>
-  </ul>
+- **1 bit for Sign**
+- **5 bits for Exponent** (bias = 15)
+- **10 bits for Mantissa**
 
-  <p>
-    This workflow demonstrates how a lightweight 16‑bit coprocessor can accelerate deep learning inference with minimal precision loss and lower hardware complexity.
-  </p>
-</section>
+It provides compact representation with limited range and is commonly used in GPUs for low-power inference and graphics.
+
+---
+
+## 🚀 What is DLFloat16?
+
+**DLFloat16** is a custom floating-point format optimized for deep learning inference. It's designed to offer:
+
+- Greater dynamic range than FP16
+- Lower area and power than FP32
+- Sufficient precision for neural network inference
+
+### DLFloat16 Format Details:
+
+- **1 bit Sign**
+- **6 bits Exponent** (bias = 31)
+- **9 bits Mantissa**
+
+This custom allocation supports deeper networks by increasing the exponent range while still maintaining precision within acceptable limits for inference tasks.
+
+### Interpretation:
+
+value = (-1)^S × 2^(E - 31) × (1 + M / 512)
+
+
+---
+
+## 🧠 Why Floating‑Point Matters in Deep Learning
+
+Neural networks require massive matrix computations during training and inference. Floating-point numbers allow:
+
+- Representation of very small and very large weights
+- Stable gradient propagation
+- Fine-tuning of parameters
+
+While FP32 is the default, lower-precision formats like FP16 and DLFloat16 are preferred for inference because:
+
+- Most weights converge to smaller values that don’t need full 32-bit representation
+- DL inference is more tolerant to quantization
+- Performance and power consumption are critical in real-time or edge scenarios
+
+---
+
+## ✅ Benefits of DLFloat16
+
+- ⚡ **Faster Computation** – Reduced logic complexity accelerates SIMD operations
+- 📉 **Lower Power Consumption** – Smaller bit-width reduces energy per operation
+- 🧠 **Sufficient Accuracy** – Acceptable trade-off between range and precision for inference
+- 🚚 **Efficient Memory Usage** – Reduces bandwidth and allows larger models to fit in cache
+
+---
+
+## 🔧 DLFloat16 in Floating-Point Execution Unit
+
+The custom execution unit is a hardware coprocessor that supports:
+
+- Packed SIMD (4 DLFloat16 ops in one 64-bit register)
+- Arithmetic operations: `add`, `sub`, `mul`, `relu`, `matmul`
+- Easy integration with RISC-V or other processors
+- Type conversions between DLFloat16 and IEEE formats
+
+This unit offloads heavy DL operations from the main core and accelerates inference tasks with minimal power.
+
+---
+
+## 📌 Summary
+
+DLFloat16 is a 16-bit floating-point format tailored for deep learning applications. It provides:
+
+- Improved dynamic range over IEEE FP16
+- Efficient packed SIMD support
+- Power and area savings
+- Suitable accuracy for inference workloads
+
+The Floating-Point Execution Unit using DLFloat16 helps implement a fast, lightweight, and scalable AI accelerator especially valuable in embedded and edge devices.
