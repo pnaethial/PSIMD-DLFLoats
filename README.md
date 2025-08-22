@@ -9,7 +9,7 @@ The goal of this project is to implement a **Packed SIMD (Single Instruction Mul
 By delegating floating-point computation to a dedicated coprocessor, the RISC-V core is relieved of intensive data-parallel operations, allowing it to focus on control flow and other general-purpose tasks. The coprocessor is designed to efficiently execute operations on a packed format of data using a custom 16-bit floating-point representation, referred to as `dlfloat16`.
 
 ---
-## Architecture Block Diagram
+## Architecture
 ### PSIMD DL Float Coprocessor:
 <img width="778" height="391" alt="image" src="https://github.com/user-attachments/assets/7699cfbb-47f2-453c-8796-9c83fb4474fb" />
 
