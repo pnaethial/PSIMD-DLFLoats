@@ -12,6 +12,7 @@ By delegating floating-point computation to a dedicated coprocessor, the RISC-V 
 ## Architecture Block Diagram
 ### PSIMD DL Float Coprocessor:
 <img width="778" height="391" alt="image" src="https://github.com/user-attachments/assets/7699cfbb-47f2-453c-8796-9c83fb4474fb" />
+
 ### RISCV CORE:
 <img width="821" height="361" alt="image" src="https://github.com/user-attachments/assets/b6f6af6e-8ef7-47e9-85e9-aba778fe1a3d" />
 
