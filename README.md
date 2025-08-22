@@ -2,11 +2,15 @@
 
 ## Project Objective
 
-The goal of this project is to implement a **Packed SIMD (Single Instruction Multiple Data) coprocessor** that offloads deep learning-related floating-point instructions from a **RISC-V core**. This coprocessor is optimized to handle lightweight yet high-performance computations commonly required in neural network inference, especially on embedded and edge devices with constrained resources.
+The goal of this project is to implement a **Packed SIMD (Single Instruction Multiple Data) coprocessor** that offloads deep learning-related floating-point instructions from a **RISC-V core**. 
 
-## Why a Coprocessor?
+This coprocessor is optimized to handle lightweight yet high-performance computations commonly required in neural network inference, especially on embedded and edge devices with constrained resources.
 
 By delegating floating-point computation to a dedicated coprocessor, the RISC-V core is relieved of intensive data-parallel operations, allowing it to focus on control flow and other general-purpose tasks. The coprocessor is designed to efficiently execute operations on a packed format of data using a custom 16-bit floating-point representation, referred to as `dlfloat16`.
+
+## Progress
+Integrated with Vex Riscv Core Using CFU Playground.
+CFU Playground [Custum Function Unit]- Accelerates ML models
 
 ---
 ## Architecture
