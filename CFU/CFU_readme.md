@@ -18,6 +18,7 @@ https://cfu-playground.readthedocs.io/en/latest/index.html
 
 
 ## Progress
-Set up the integration of VexRiscv and DL Float FPU.
-Offloads Deep Learning applications onto the CFU (FPU).
+- Set up the integration of VexRiscv and DL Float FPU.
+- Offloads Deep Learning applications onto the CFU (FPU).
+- Acceleration Observed
 
