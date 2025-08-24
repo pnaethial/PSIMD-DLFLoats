@@ -1,4 +1,4 @@
-module instr_buffer(
+module instr_bin(
     input logic clk,
     output logic [31:0] instr
 );
