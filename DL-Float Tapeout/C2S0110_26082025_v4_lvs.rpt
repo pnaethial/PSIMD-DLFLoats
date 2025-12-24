@@ -1,0 +1,513 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         C2S0110_26082025_v4_lvs.rpt
+LAYOUT NAME:              C2S0110.sp ('C2S0110')
+SOURCE NAME:              /home/CHIPS/Music/PROJECTS/MAC/verification/lvs/C2S0110.sp ('C2S0110')
+RULE FILE:                _LVS.header_
+CREATION TIME:            Tue Aug 26 17:40:45 2025
+CURRENT DIRECTORY:        /home/CHIPS/Music/PROJECTS/MAC/verification/lvs
+USER NAME:                CHIPS
+CALIBRE VERSION:          v2022.4_37.20    Fri Dec 2 17:41:13 PST 2022
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+  Warning:  Ambiguity points were found and resolved arbitrarily.
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  CORRECT        C2S0110                       C2S0110
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   // LVS COMPONENT TYPE PROPERTY
+   // LVS COMPONENT SUBTYPE PROPERTY
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "VDD" "vdd" "VCC" "vcc" "VDDD" "VDD!" "vdd!" "VCC!" "vcc!" "AVDD" "DVDD"
+   LVS GROUND NAME                        "GND" "gnd" "VSS" "vss" "GNDD" "GND!" "gnd!" "VSS!" "vss!" "AVSS" "DVSS"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   // LVS HCELL REPORT
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   YES
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       NO
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       YES
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS RELAX INITIAL CPOINTS              NONE
+   LVS REVERSE WL                         NO
+   // LVS NETLIST FILTER DEVICES          NO
+   // LVS PRESERVE BOX PORTS              NO
+   LVS SPICE PREFER PINS                  NO
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   // LVS SPICE ALLOW INLINE PARAMETERS     
+   LVS SPICE ALLOW UNQUOTED STRINGS       NO
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   // LVS SPICE EXCLUDE CELL SOURCE
+   // LVS SPICE EXCLUDE CELL LAYOUT
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             NO
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            YES
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    NO
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    NO
+   LVS EXACT SUBTYPES                     NO
+   LAYOUT CASE                            YES
+   SOURCE CASE                            YES
+   LVS COMPARE CASE                       NO
+   LVS COMPARE CASE STRICT                NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     ALL
+   LVS PROPERTY RESOLUTION MAXIMUM        32
+   // LVS SIGNATURE MAXIMUM
+   LVS FILTER UNUSED OPTION               AB RC RE RG
+   LVS REPORT OPTION                      A B C D FX G S V
+   LVS REPORT UNITS                       YES
+   LVS SWAPPABLE HCELL PINS               GENERAL
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+   // LVS IGNORE DEVICE PIN
+   // LVS PREFER NETS FILTER SOURCE
+   // LVS PREFER NETS FILTER LAYOUT
+   LVS PREFER PORT NETS                   NO
+   LVS EXPAND ON ERROR                    NO
+   LVS EXPAND AMBIGUOUSLY HIGH SHORTED HCELLS NO
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  NO
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             NO
+   LVS REDUCE SPLIT GATES                 YES
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           NO
+   LVS REDUCE PARALLEL CAPACITORS         NO
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+
+   LVS REDUCE  Q(VD)  PARALLEL
+   LVS REDUCE  Q(VD5)  PARALLEL
+   LVS REDUCE  Q(VD10)  PARALLEL
+   LVS REDUCE  Q(VH)  PARALLEL
+   LVS REDUCE  Q(VH5)  PARALLEL
+   LVS REDUCE  Q(VH10)  PARALLEL
+   LVS REDUCE  Q(VDN5)  PARALLEL
+   LVS REDUCE  C(CL)  PARALLEL
+   LVS REDUCE  C(CH)  PARALLEL
+   LVS REDUCE  C(CH3)  PARALLEL
+   LVS REDUCE  C(ch53t)  PARALLEL
+   LVS REDUCE  C(CL3)  PARALLEL
+   LVS REDUCE  C(CB)  PARALLEL
+   LVS REDUCE  C(cmim_hc)  PARALLEL
+   LVS REDUCE  C(cmim_uhd)  PARALLEL
+   LVS REDUCE  C(cmim_stk)  PARALLEL
+   LVS REDUCE  C(cmim_uhdstk)  PARALLEL
+   LVS REDUCE  D(W3)  PARALLEL NO
+   LVS REDUCE  D(DW)  PARALLEL NO
+   LVS REDUCE  MN(NH)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MN(N5)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MN(N)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MN(n18hvt)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MN(n18lvt)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(P)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(p18hvt)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(p18lvt)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(PH)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(P5)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Trace Property
+
+   TRACE PROPERTY  mp  w w 3
+   TRACE PROPERTY  mp  l l 3
+   TRACE PROPERTY  mn  w w 3
+   TRACE PROPERTY  mn  l l 3
+   TRACE PROPERTY  c(cl)  w w 3
+   TRACE PROPERTY  c(cl)  l l 3
+   TRACE PROPERTY  c(cl3)  w w 3
+   TRACE PROPERTY  c(cl3)  l l 3
+   TRACE PROPERTY  c(ch)  w w 3
+   TRACE PROPERTY  c(ch)  l l 3
+   TRACE PROPERTY  c(ch3)  w w 3
+   TRACE PROPERTY  c(ch3)  l l 3
+   TRACE PROPERTY  c(ch53t)  w w 3
+   TRACE PROPERTY  c(ch53t)  l l 3
+   TRACE PROPERTY  r(rl)  r r 10
+   TRACE PROPERTY  r(rt)  r r 10
+   TRACE PROPERTY  r(rt3)  r r 10
+   TRACE PROPERTY  r(ra)  r r 10
+   TRACE PROPERTY  r(rb)  r r 10
+   TRACE PROPERTY  r(rc)  r r 10
+   TRACE PROPERTY  r(rd)  r r 10
+   TRACE PROPERTY  r(re)  r r 10
+   TRACE PROPERTY  r(rg)  r r 10
+   TRACE PROPERTY  r(rh)  r r 10
+   TRACE PROPERTY  r(rw)  r r 10
+   TRACE PROPERTY  r(rf)  r r 10
+   TRACE PROPERTY  r(rk)  r r 10
+   TRACE PROPERTY  r(rm)  r r 10
+   TRACE PROPERTY  r(r1)  r r 10
+   TRACE PROPERTY  r(r2)  r r 10
+   TRACE PROPERTY  r(rb3)  r r 10
+   TRACE PROPERTY  r(ra3)  r r 10
+   TRACE PROPERTY  r(rc3)  r r 10
+   TRACE PROPERTY  r(mr2)  r r 10
+   TRACE PROPERTY  r(mr22t)  r r 10
+   TRACE PROPERTY  r(mr33t)  r r 10
+   TRACE PROPERTY  r(rd3)  r r 10
+   TRACE PROPERTY  r(r2d3)  r r 10
+   TRACE PROPERTY  r(re3)  r r 10
+   TRACE PROPERTY  r(rg3)  r r 10
+   TRACE PROPERTY  r(rh3)  r r 10
+   TRACE PROPERTY  r(rw3)  r r 10
+   TRACE PROPERTY  r(rf3)  r r 10
+   TRACE PROPERTY  r(rk3)  r r 10
+   TRACE PROPERTY  r(rm3)  r r 10
+   TRACE PROPERTY  r(r3)  r r 10
+   TRACE PROPERTY  c(cb)  c c 6
+   TRACE PROPERTY  c(cmim_hc)  c c 6
+   TRACE PROPERTY  c(cmim_uhd)  c c 6
+   TRACE PROPERTY  c(cmim_stk)  c c 6
+   TRACE PROPERTY  c(cmim_uhdstk)  c c 6
+   TRACE PROPERTY  c(cm32t)  l l 3
+   TRACE PROPERTY  c(cm32t)  nf nf 0
+   TRACE PROPERTY  c(cm33t)  l l 3
+   TRACE PROPERTY  c(cm33t)  nf nf 0
+   TRACE PROPERTY  c(usgcm32t)  l l 3
+   TRACE PROPERTY  c(usgcm32t)  nf nf 0
+   TRACE PROPERTY  c(usgcm33t)  l l 3
+   TRACE PROPERTY  c(usgcm33t)  nf nf 0
+   TRACE PROPERTY  d(ns)  a a 10
+   TRACE PROPERTY  d(dn)  a a 10
+   TRACE PROPERTY  d(n3)  a a 10
+   TRACE PROPERTY  d(dn50)  a a 10
+   TRACE PROPERTY  d(ps)  a a 10
+   TRACE PROPERTY  d(dp)  a a 10
+   TRACE PROPERTY  d(p3)  a a 10
+   TRACE PROPERTY  d(dp50)  a a 10
+   TRACE PROPERTY  d(nwldio_nc)  a a 10
+   TRACE PROPERTY  d(ns)  p p 10
+   TRACE PROPERTY  d(dn)  p p 10
+   TRACE PROPERTY  d(n3)  p p 10
+   TRACE PROPERTY  d(dn50)  p p 10
+   TRACE PROPERTY  d(ps)  p p 10
+   TRACE PROPERTY  d(dp)  p p 10
+   TRACE PROPERTY  d(p3)  p p 10
+   TRACE PROPERTY  d(dp50)  p p 10
+   TRACE PROPERTY  d(nwldio_nc)  p p 10
+   TRACE PROPERTY  q(vd)  m m 0
+   TRACE PROPERTY  q(vd5)  m m 0
+   TRACE PROPERTY  q(vd10)  m m 0
+   TRACE PROPERTY  q(vh)  m m 0
+   TRACE PROPERTY  q(vh5)  m m 0
+   TRACE PROPERTY  q(vh10)  m m 0
+   TRACE PROPERTY  q(vdn5)  m m 0
+   TRACE PROPERTY  q(vpnp18_s)  a a 10
+   TRACE PROPERTY  q(vpnp33_s)  a a 10
+   TRACE PROPERTY  q(vnpn18_s)  a a 10
+   TRACE PROPERTY  q(vpnp18_s)  p p 10
+   TRACE PROPERTY  q(vpnp33_s)  p p 10
+   TRACE PROPERTY  q(vnpn18_s)  p p 10
+   TRACE PROPERTY  mn(nh)  w w 3
+   TRACE PROPERTY  mn(nh)  l l 3
+   TRACE PROPERTY  mn(n5)  w w 3
+   TRACE PROPERTY  mn(n5)  l l 3
+   TRACE PROPERTY  mn(n)  w w 3
+   TRACE PROPERTY  mn(n)  l l 3
+   TRACE PROPERTY  mn(n18hvt)  w w 3
+   TRACE PROPERTY  mn(n18hvt)  l l 3
+   TRACE PROPERTY  mn(n18lvt)  w w 3
+   TRACE PROPERTY  mn(n18lvt)  l l 3
+   TRACE PROPERTY  mp(p)  w w 3
+   TRACE PROPERTY  mp(p)  l l 3
+   TRACE PROPERTY  mp(p18hvt)  w w 3
+   TRACE PROPERTY  mp(p18hvt)  l l 3
+   TRACE PROPERTY  mp(p18lvt)  w w 3
+   TRACE PROPERTY  mp(p18lvt)  l l 3
+   TRACE PROPERTY  mp(ph)  w w 3
+   TRACE PROPERTY  mp(ph)  l l 3
+   TRACE PROPERTY  mp(p5)  w w 3
+   TRACE PROPERTY  mp(p5)  l l 3
+   TRACE PROPERTY  d(dnpwcpl18)  a a 10
+   TRACE PROPERTY  d(dnpwcpl18)  p p 10
+   TRACE PROPERTY  d(dnpwcpl5)  a a 10
+   TRACE PROPERTY  d(dnpwcpl5)  p p 10
+   TRACE PROPERTY  d(dpnwcpl18)  a a 10
+   TRACE PROPERTY  d(dpnwcpl18)  p p 10
+   TRACE PROPERTY  d(dpnwcpl5)  a a 10
+   TRACE PROPERTY  d(dpnwcpl5)  p p 10
+
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
+
+
+  Warning:  Ambiguity points were found and resolved arbitrarily.
+
+LAYOUT CELL NAME:         C2S0110
+SOURCE CELL NAME:         C2S0110
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:              0         0
+
+ Nets:           57802     57802
+
+ Instances:      59837     59837         MN (4 pins)
+                 59971     59971         MP (4 pins)
+                    10        10         C (2 pins)
+                   469       469         R (2 pins)
+                   197       197         D (2 pins)
+                ------    ------
+ Total Inst:    120484    120484
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:              0         0
+
+ Nets:           25861     25861
+
+ Instances:       1290      1290         MN (4 pins)
+                  1467      1467         MP (4 pins)
+                    10        10         C (2 pins)
+                   396       396         R (2 pins)
+                    19        19         D (2 pins)
+                  1532      1532         SPMN_2_1 (5 pins)
+                   193       193         SPMN_2_1_1 (6 pins)
+                   379       379         SPMN_2_2 (6 pins)
+                    29        29         SPMN_2_2_1 (7 pins)
+                    80        80         SPMN_2_2_2 (8 pins)
+                   413       413         SPMN_3_1 (6 pins)
+                     6         6         SPMN_3_1_1 (7 pins)
+                    10        10         SPMN_3_2_1 (8 pins)
+                     4         4         SPMN_3_2_2 (9 pins)
+                  1456      1456         SPMP_2_1 (5 pins)
+                    50        50         SPMP_2_1_1 (6 pins)
+                   957       957         SPMP_2_2 (6 pins)
+                   136       136         SPMP_2_2_1 (7 pins)
+                    90        90         SPMP_2_2_2 (8 pins)
+                   464       464         SPMP_3_1 (6 pins)
+                    11        11         SPMP_3_1_1 (7 pins)
+                     9         9         SPMP_3_2_1 (8 pins)
+                    19        19         SPMP_3_2_2 (9 pins)
+                   261       261         SPMN((2+1)*1) (6 pins)
+                   114       114         SPMP((2+1)*1) (6 pins)
+                   224       224         _invb (6 pins)
+                  7661      7661         _invv (4 pins)
+                   196       196         _invx2v (4 pins)
+                    21        21         _invx3v (4 pins)
+                  8067      8067         _nand2v (5 pins)
+                   782       782         _nand3v (6 pins)
+                   227       227         _nand4v (7 pins)
+                    16        16         _nor2b (7 pins)
+                  2659      2659         _nor2v (5 pins)
+                    88        88         _nor3v (6 pins)
+                    89        89         _nor4v (7 pins)
+                    62        62         _pmn2v (4 pins)
+                    18        18         _pmn4v (6 pins)
+                   216       216         _pmp2v (4 pins)
+                  3795      3795         _smn2v (4 pins)
+                   503       503         _smn3v (5 pins)
+                  2761      2761         _smp2v (4 pins)
+                   433       433         _smp3v (5 pins)
+                    26        26         _xnori2v (5 pins)
+                    98        98         _xori2v (5 pins)
+                   121       121         _xr2v (5 pins)
+                   121       121         _xra2v (5 pins)
+                ------    ------
+ Total Inst:     37579     37579
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:               0          0            0            0
+
+   Nets:            25861      25861            0            0
+
+   Instances:        1025       1025            0            0    MN(N)
+                      265        265            0            0    MN(NH)
+                     1255       1255            0            0    MP(P)
+                      212        212            0            0    MP(PH)
+                       10         10            0            0    C(CH)
+                      254        254            0            0    R(RD)
+                       53         53            0            0    R(RE)
+                       89         89            0            0    R(RW)
+                       17         17            0            0    D(DN)
+                        2          2            0            0    D(P3)
+                     1532       1532            0            0    SPMN_2_1
+                      193        193            0            0    SPMN_2_1_1
+                      379        379            0            0    SPMN_2_2
+                       29         29            0            0    SPMN_2_2_1
+                       80         80            0            0    SPMN_2_2_2
+                      413        413            0            0    SPMN_3_1
+                        6          6            0            0    SPMN_3_1_1
+                       10         10            0            0    SPMN_3_2_1
+                        4          4            0            0    SPMN_3_2_2
+                     1456       1456            0            0    SPMP_2_1
+                       50         50            0            0    SPMP_2_1_1
+                      957        957            0            0    SPMP_2_2
+                      136        136            0            0    SPMP_2_2_1
+                       90         90            0            0    SPMP_2_2_2
+                      464        464            0            0    SPMP_3_1
+                       11         11            0            0    SPMP_3_1_1
+                        9          9            0            0    SPMP_3_2_1
+                       19         19            0            0    SPMP_3_2_2
+                      261        261            0            0    SPMN((2+1)*1)
+                      114        114            0            0    SPMP((2+1)*1)
+                      224        224            0            0    _invb
+                     7661       7661            0            0    _invv
+                      196        196            0            0    _invx2v
+                       21         21            0            0    _invx3v
+                     8067       8067            0            0    _nand2v
+                      782        782            0            0    _nand3v
+                      227        227            0            0    _nand4v
+                       16         16            0            0    _nor2b
+                     2659       2659            0            0    _nor2v
+                       88         88            0            0    _nor3v
+                       89         89            0            0    _nor4v
+                       62         62            0            0    _pmn2v
+                       18         18            0            0    _pmn4v
+                      216        216            0            0    _pmp2v
+                     3795       3795            0            0    _smn2v
+                      503        503            0            0    _smn3v
+                     2761       2761            0            0    _smp2v
+                      433        433            0            0    _smp3v
+                       26         26            0            0    _xnori2v
+                       98         98            0            0    _xori2v
+                      121        121            0            0    _xr2v
+                      121        121            0            0    _xra2v
+                  -------    -------    ---------    ---------
+   Total Inst:      37579      37579            0            0
+
+
+o Statistics:
+
+   9 isolated layout nets were deleted.
+   9 isolated source nets were deleted.
+
+   11903 layout mos transistors were reduced to 5203.  1065 connecting nets were deleted.
+     4707 mos transistors were deleted by parallel reduction.
+     1993 mos transistors and 1065 connecting nets were deleted by split-gate reduction.
+   11903 source mos transistors were reduced to 5203.  1065 connecting nets were deleted.
+     4707 mos transistors were deleted by parallel reduction.
+     1993 mos transistors and 1065 connecting nets were deleted by split-gate reduction.
+
+   146 series layout resistors were reduced to 73.  73 connecting nets were deleted.
+   146 series source resistors were reduced to 73.  73 connecting nets were deleted.
+
+   180 parallel layout diodes were reduced to 2.
+   180 parallel source diodes were reduced to 2.
+
+   16 nets were matched arbitrarily.
+
+
+o Ambiguity Resolution Points:
+
+      (Each one of the following objects belongs to a group of indistinguishable objects.
+       The listed objects were matched arbitrarily by the Ambiguity Resolution feature of LVS.
+       Arbitrary matching may be prevented by assigning names to these objects or to adjacent nets).
+
+       Layout                                                    Source
+       ------                                                    ------
+
+                                     Nets
+                                     ----
+
+       X39/X3/X0/11                                              X39/X3/X0/11
+       X57/101                                                   X57/101
+       X57/100                                                   X57/100
+       X57/X17/6                                                 X39/X76/6
+       X39/X76/6                                                 X57/X17/6
+       X27/X12/6                                                 X48/X78/6
+       X57/X16/5                                                 X48/X77/5
+       X48/X77/5                                                 X57/X16/5
+       X39/X75/5                                                 X39/X75/5
+       X27/X12/7                                                 X48/X78/7
+       X57/X16/6                                                 X48/X77/6
+       X27/X11/6                                                 X39/X75/6
+       X57/X17/7                                                 X39/X76/7
+       X39/X76/7                                                 X57/X17/7
+       X39/X75/6                                                 X27/X11/6
+       X48/X77/6                                                 X57/X16/6
+
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      1 sec
+Total Elapsed Time:  1 sec

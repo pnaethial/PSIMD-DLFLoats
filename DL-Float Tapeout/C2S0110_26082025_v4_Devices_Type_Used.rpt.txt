@@ -1,0 +1,19 @@
+Standard Cell Libraries Used:
+tsl18fs120_scl_ff 
+tsl18cio150_min
+
+
+ Devices from Core Standard Cell Library (tsl18fs120_scl_ff):
+
+ Basic Gates        : an02d0, nd02d1, or02d1, nr02d1, xr02d1
+ Complex Gates (AOI/OAI)   : aoi211d1, aoi22d1, oai21d1, oai221d2
+ Buffers/Inverters  : buffd1, inv0d0, inv0d2
+ Sequential Cells   : dfnrq1
+ Clock Gating	    : cg01d0, cg01d1
+ Multiplexers       : mx02d1
+
+Devices from I/O Cell Library (tsl18cio150_min):
+
+ I/O Pads    : pc3c01, pc3d01, pc3o05
+ Power Pads  : pvdi, pvda
+ Ground Pads : pv0i, pv0a

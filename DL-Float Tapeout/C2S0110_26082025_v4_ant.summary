@@ -1,0 +1,190 @@
+
+
+==================================================================================
+=== CALIBRE::DRC-F SUMMARY REPORT
+===
+Execution Date/Time:       Tue Aug 26 17:37:11 2025
+Calibre Version:           v2022.4_37.20    Fri Dec 2 17:41:13 PST 2022
+Rule File Pathname:        _ANTENNA.header_
+Rule File Title:           
+Layout System:             GDS
+Layout Path(s):            C2S0110.gds
+Layout Primary Cell:       C2S0110
+Current Directory:         /home/CHIPS/Music/PROJECTS/MAC/verification/ant
+User Name:                 CHIPS
+Maximum Results/RuleCheck: ALL
+Maximum Result Vertices:   4294967294
+DRC Results Database:      C2S0110_26082025_v4_ant.rpt (ASCII)
+Layout Depth:              ALL
+Text Depth:                PRIMARY
+Summary Report File:       C2S0110_26082025_v4_ant.summary (REPLACE)
+Geometry Flagging:         ACUTE = YES  SKEW = YES  ANGLED = NO  OFFGRID = YES
+                           NONSIMPLE POLYGON = NO  NONSIMPLE PATH = NO
+Excluded Cells:           
+CheckText Mapping:         COMMENT TEXT + RULE FILE INFORMATION
+Layers:                    MEMORY-BASED
+Keep Empty Checks:         NO
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+ACUTE angle on layer AA at location (254.67,249.8) in cell subil_midconer2.
+ACUTE angle on layer AA at location (248.97,242.18) in cell subil_midconer2.
+ACUTE angle on layer AA at location (246.54,239.88) in cell subil_midconer2.
+ACUTE angle on layer AA at location (249.8,254.67) in cell subil_midconer2.
+ACUTE angle on layer AA at location (242.18,248.97) in cell subil_midconer2.
+ACUTE angle on layer AA at location (239.88,246.54) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1748.2,254.67) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1755.82,248.97) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1758.12,246.54) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1743.33,249.8) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1749.03,242.18) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1751.46,239.88) in cell subil_midconer2.
+ACUTE angle on layer AA at location (249.8,1743.33) in cell subil_midconer2.
+ACUTE angle on layer AA at location (242.18,1749.03) in cell subil_midconer2.
+ACUTE angle on layer AA at location (239.88,1751.46) in cell subil_midconer2.
+ACUTE angle on layer AA at location (254.67,1748.2) in cell subil_midconer2.
+ACUTE angle on layer AA at location (248.97,1755.82) in cell subil_midconer2.
+ACUTE angle on layer AA at location (246.54,1758.12) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1743.33,1748.2) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1749.03,1755.82) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1751.46,1758.12) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1748.2,1743.33) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1755.82,1749.03) in cell subil_midconer2.
+ACUTE angle on layer AA at location (1758.12,1751.46) in cell subil_midconer2.
+ACUTE angle on layer M1 at location (318.245,656.03) in cell char_l0.
+SKEW edge on layer M1 from location (322.745,651.11) to location (319.475,655.595) in cell char_l0.
+SKEW edge on layer M1 from location (318.245,656.03) to location (321.505,651.55) in cell char_l0.
+ACUTE angle on layer M1 at location (318.245,622.05) in cell char_l0.
+SKEW edge on layer M1 from location (322.745,617.13) to location (319.475,621.615) in cell char_l0.
+SKEW edge on layer M1 from location (318.245,622.05) to location (321.505,617.57) in cell char_l0.
+ACUTE angle on layer M2 at location (113.58,1144.89) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1146.49) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1135.45) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1137.05) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1126.01) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1127.61) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1116.57) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1118.17) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1107.13) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1108.73) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1097.69) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1099.29) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1236.09) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1237.69) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1226.65) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1228.25) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1217.21) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1218.81) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1207.77) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1209.37) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1198.33) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1199.93) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1188.89) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1190.49) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,872.49) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,874.09) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,863.05) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,864.65) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,853.61) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,855.21) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,844.17) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,845.77) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,834.73) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,836.33) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,825.29) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,826.89) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,963.69) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,965.29) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,954.25) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,955.85) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,944.81) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,946.41) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,935.37) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,936.97) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,925.93) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,927.53) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,916.49) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,918.09) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1686.09) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1687.69) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1676.65) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1678.25) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1667.21) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1668.81) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1657.77) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1659.37) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1648.33) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1649.93) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1638.89) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1640.49) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1596.09) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1597.69) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1586.65) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1588.25) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1577.21) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1578.81) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1567.77) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1569.37) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1558.33) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1559.93) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1548.89) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1550.49) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1506.09) in cell subil_pngatebuff.
+ACUTE angle on layer M2 at location (113.58,1507.69) in cell subil_pngatebuff.
+Maximum ACUTE angle warning count of 100 has been reached.
+SKEW edge on layer M2 from location (322.745,651.11) to location (319.475,655.595) in cell char_l0.
+SKEW edge on layer M2 from location (318.245,656.03) to location (321.505,651.55) in cell char_l0.
+SKEW edge on layer M2 from location (322.745,617.13) to location (319.475,621.615) in cell char_l0.
+SKEW edge on layer M2 from location (318.245,622.05) to location (321.505,617.57) in cell char_l0.
+SKEW edge on layer M3 from location (322.745,651.11) to location (319.475,655.595) in cell char_l0.
+SKEW edge on layer M3 from location (318.245,656.03) to location (321.505,651.55) in cell char_l0.
+SKEW edge on layer M3 from location (322.745,617.13) to location (319.475,621.615) in cell char_l0.
+SKEW edge on layer M3 from location (318.245,622.05) to location (321.505,617.57) in cell char_l0.
+SKEW edge on layer MT from location (322.745,651.11) to location (319.475,655.595) in cell char_l0.
+SKEW edge on layer MT from location (318.245,656.03) to location (321.505,651.55) in cell char_l0.
+SKEW edge on layer MT from location (322.745,617.13) to location (319.475,621.615) in cell char_l0.
+SKEW edge on layer MT from location (318.245,622.05) to location (321.505,617.57) in cell char_l0.
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER SPC_stack ... TOTAL Original Geometry Count = 0
+LAYER CE .......... TOTAL Original Geometry Count = 1
+LAYER V3i ......... TOTAL Original Geometry Count = 561827
+LAYER M4mim ....... TOTAL Original Geometry Count = 0
+LAYER VTi ......... TOTAL Original Geometry Count = 652902
+LAYER AA .......... TOTAL Original Geometry Count = 151744
+LAYER GC .......... TOTAL Original Geometry Count = 88579
+LAYER CS .......... TOTAL Original Geometry Count = 981925
+LAYER HV .......... TOTAL Original Geometry Count = 3062
+LAYER M1 .......... TOTAL Original Geometry Count = 364306
+LAYER V2 .......... TOTAL Original Geometry Count = 677887
+LAYER M2 .......... TOTAL Original Geometry Count = 189985
+LAYER M3 .......... TOTAL Original Geometry Count = 61192
+LAYER MT .......... TOTAL Original Geometry Count = 8187
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK AN.GC.1 ....... TOTAL Result Count = 0
+RULECHECK AN.CS.1 ....... TOTAL Result Count = 0
+RULECHECK AN.MTL.1.M1 ... TOTAL Result Count = 0
+RULECHECK AN.MTL.2.M1 ... TOTAL Result Count = 0
+RULECHECK AN.VIA.1.V2 ... TOTAL Result Count = 0
+RULECHECK AN.VIA.2.V2 ... TOTAL Result Count = 0
+RULECHECK AN.MTL.1.M2 ... TOTAL Result Count = 0
+RULECHECK AN.MTL.2.M2 ... TOTAL Result Count = 0
+RULECHECK AN.VIA.1.V3 ... TOTAL Result Count = 0
+RULECHECK AN.VIA.2.V3 ... TOTAL Result Count = 0
+RULECHECK AN.MTL.1.M3 ... TOTAL Result Count = 0
+RULECHECK AN.MTL.2.M3 ... TOTAL Result Count = 0
+RULECHECK AN.VIA.1.VT ... TOTAL Result Count = 0
+RULECHECK AN.VIA.2.VT ... TOTAL Result Count = 0
+RULECHECK AN.MTL.1.MT ... TOTAL Result Count = 0
+RULECHECK AN.MTL.2.MT ... TOTAL Result Count = 0
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                  23
+TOTAL REAL Time:                 24
+TOTAL Original Layer Geometries: 3741597
+TOTAL DRC RuleChecks Executed:   16
+TOTAL DRC Results Generated:     0

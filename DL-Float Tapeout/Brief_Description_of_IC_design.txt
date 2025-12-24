@@ -1,0 +1,35 @@
+The Deep Learning Floating Point Unit (DL-FPU) is a specialized 16-bit DL floating-point arithmetic accelerator designed to meet the computational demands of modern neural networks and deep learning workloads. This unit implements the essential floating-point operations of Addition, Multiplication, Division, and Multiply-Accumulate (MAC), based on IBM’s DL Floating-Point representation format, which offers an optimized balance between precision and hardware efficiency.
+
+Architecture and Functional Blocks:
+Adder Unit: Performs normalized deep learning floating-point addition with detailed handling of exponent alignment, mantissa addition/subtraction, sign determination, renormalization, and special condition checks such as overflow, underflow, and zero or infinite inputs.
+
+Multiplier Unit: Implements pipelined multiplication of deep learning floating-point operands, incorporating exponent addition, mantissa multiplication, sign bit management, and overflow/underflow detection for robust numerical processing.
+
+Divider Unit: Realizes deep learning floating-point division through a combinational and sequential logic design that safely handles corner cases including division by zero, infinite values, and rounding, while maintaining precision and timing requirements.
+
+Square Root Unit: Computes the square root of deep learning floating-point numbers using an iterative approximation method optimized for the 16-bit DLFP format. It includes exponent halving, mantissa normalization, rounding logic, and checks for invalid inputs (e.g., negative numbers producing NaN). This unit is critical in deep learning workloads for normalization layers and certain activation functions.
+
+Multiply-Accumulate (MAC) Unit: Combines the multiplier and adder units internally to accelerate accumulate operations critical in deep learning algorithms such as convolution and matrix multiplications.
+
+Euclidean norm and Dot product calculation unit.
+
+MUX: 8:1 MUX is used to select the output from 8 units and 3-bit sel signal is used as a select line for 8:1 MUX.
+
+Design Features and Performance:
+Uses a 16-bit floating-point format tailored for deep learning, comprising 1 sign bit, 6 exponent bits, and 9 mantissa bits, balancing hardware resource usage and computational accuracy.
+
+Operates synchronously with a targeted maximum clock frequency of 10 MHz, suitable for embedded and SoC applications with moderate speed and low power requirements.
+
+Incorporates asynchronous active-low reset and pipelining registers to meet timing and stability requirements.
+
+Technology and Implementation:
+Synthesized, placed, and routed using standard cell-based design methodologies targeting the SCL 180nm CMOS process node.
+
+Underwent comprehensive physical verification, including Design Rule Check (DRC) to ensure compliance with foundry layout rules, and Antenna Effect checks to prevent damage to gate oxides caused by plasma damage during fabrication.
+
+All DRC and antenna violations have been resolved, and verification reports confirm design adherence to foundry standards.
+
+Layout versus Schematic (LVS) checks have been performed using gate-level netlists and layout GDS files to verify netlist equivalence and layout correctness.
+
+Applications and Usage:
+Suitable for embedded neural network accelerators, DSP units, and AI edge devices where area, power, and computation accuracy are critical.

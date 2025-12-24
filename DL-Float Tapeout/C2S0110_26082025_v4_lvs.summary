@@ -1,0 +1,28 @@
+
+
+==================================================================================
+=== CALIBRE::LVS-H SUMMARY REPORT
+===
+
+Extraction Summary
+------------------
+Extraction Start Time:                       Tue Aug 26 17:40:22 2025
+Extraction Finish Time:                      Tue Aug 26 17:40:43 2025
+Circuit Extraction Report:                   C2S0110_26082025_v4_lvs.rpt.ext
+Circuit Extraction SPICE Netlist:            C2S0110.sp
+
+Comparison Summary
+------------------
+Comparison Start Time:                       Tue Aug 26 17:40:44 2025
+Comparison Finish Time:                      Tue Aug 26 17:40:45 2025
+LVS Comparison Report:                       C2S0110_26082025_v4_lvs.rpt
+LVS Comparison Status:                       CORRECT.
+
+                            #                _   _     
+                           #                 *   *     
+                      #   #                    |       
+                       # #                   \___/     
+                        #                              
+
+Comparison Warning Types Detected:           1
+
